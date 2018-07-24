@@ -45,7 +45,5 @@ for ano in 1988...2018 {
  Filtre um array de anos, deixando somente os bissextos
  */
 
-let bissextos = Array(1988...2018).filter { ano in
-    bissexto(ano: ano)
-}
+let bissextos = Array(1988...2018).filter(bissexto)
 print(bissextos)
