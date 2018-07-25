@@ -14,7 +14,7 @@ import UIKit
 // "Q", "Z" - 10
 
 
-/*func valorLetra(_ letra: String) -> Int {
+func valorLetra(_ letra: String) -> Int {
     let valor: Int
     
     switch letra {
@@ -42,27 +42,42 @@ import UIKit
 
 
 let palavra = "SCRABBLE"
-var soma = 0
 
-for letra in palavra.characters {
+// For in
+var soma = 0
+for letra in palavra {
     soma = soma + valorLetra(String(letra))
 }
+soma
 
-soma*/
 
-// Exercício 02
+// Reduce
+palavra.reduce(0) { (resultado, letra) -> Int in
+    return resultado + valorLetra(String(letra))
+}
+
+palavra.reduce(0) { (sum, char) -> Int in
+    sum + valorLetra(String(char))
+}
+
+
+
+
+
+
+
+
+
+// Exercício 03
 
 var pergunta: String = "Quanto é 2 mais 1?"
 
 var perguntaLowerCase = pergunta.lowercased().dropLast()
 
-/*perguntaLowerCase = perguntaLowerCase.replacingOccurrences(of: "quanto é ", with: "")
-
-perguntaLowerCase = perguntaLowerCase.replacingOccurrences(of: "?", with: "")*/
-
-
 var components = perguntaLowerCase.components(separatedBy: " ")
+
 var resultado: Int = Int.min
+
 switch components[3] {
 case "mais":
     resultado = Int(components[2])! + Int(components[4])!
@@ -75,11 +90,22 @@ case "vezes":
     
 case "sobre":
     resultado = Int(components[2])! / Int(components[4])!
+    
 default:
     break
 }
 
 resultado
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -123,45 +149,57 @@ func digitos(_ entrada: Int) -> [Int] {
     
 }
 
-digitos(123)
+digitos(123) // [1, 2, 3]
 
 
-// EXEC 04
 
-func ordenaNumeros(_ arrayNumero:[Int]) -> [Int]{
-    var ok: Bool = true
-    var numero: Int
-    var array = arrayNumero
-    for idx in 1..<array.count{
-        if array[idx-1] >= array[idx]{
-            numero = array[idx-1]
-            array[idx-1] = array[idx]
-            array[idx] = numero
-            ok = false
-            print(array)
-        }
-    }
-    if !ok{
-        array = ordenaNumeros(array)
-    }
-    return array
+
+
+
+
+
+
+
+
+
+
+
+
+// EXEC 05-a
+
+var pessoas: [[String:String]] = [
+    [
+        "nome": "Hilton",
+        "sobrenome": "Pintor"
+    ],
+    [
+        "nome": "Elton",
+        "sobrenome": "Santana"
+    ],
+    [
+        "nome": "Daniel",
+        "sobrenome": "Oliveira"
+    ],
+    [
+        "nome": "Clarissa",
+        "sobrenome": "Pessoa"
+    ],
+    [
+        "nome": "Fanny",
+        "sobrenome": "Chien"
+    ]
+]
+
+let nomes = pessoas.map { pessoa in
+    pessoa["nome"]
 }
 
-
-func digitos() -> [Int]{
-    var arrayNumero = [Int]()
-    
-    arrayNumero.append(1)
-    arrayNumero.append(7)
-    arrayNumero.append(5)
-    arrayNumero.append(4)
-    arrayNumero.append(6)
-    
-    return ordenaNumeros(arrayNumero)
+let sobrenomes = pessoas.map { pessoa in
+    pessoa["sobrenome"]
 }
-digitos()
 
-
-
+let nomeCompleto = zip(nomes, sobrenomes).map { nome, sobrenome in
+    nome! + " " + sobrenome!
+}
 
 
