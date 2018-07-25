@@ -164,3 +164,9 @@ class Retangulo: Forma {
         return (self.base * 2) + (self.altura * 2)
     }
 }
+
+class Quadrado2: Retangulo {
+    init(lado: Float) {
+        super.init(base: lado, altura: lado)
+    }
+}
