@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tam-u9-JT6">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Carro-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tab_Bar_Grande" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-Car" translatesAutoresizingMaskIntoConstraints="NO" id="pyW-eO-6XV">
+                                <rect key="frame" x="57" y="231" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Carro" image="8-Car" id="Rhf-Y7-eN3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="103" y="147"/>
+        </scene>
+        <!--Bus-->
+        <scene sceneID="bLQ-uA-LOB">
+            <objects>
+                <viewController id="04Z-Jl-UfI" customClass="ViewController" customModule="Tab_Bar_Grande" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QNR-VD-vj9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-Bus" translatesAutoresizingMaskIntoConstraints="NO" id="HSO-ab-I40">
+                                <rect key="frame" x="67" y="231" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="OYO-P8-YiQ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Bus" image="8-Bus" id="Sgg-hH-6IZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VXB-l3-77l" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="799" y="134"/>
+        </scene>
+        <!--Moto-->
+        <scene sceneID="gh5-06-cPH">
+            <objects>
+                <viewController id="fu2-Nb-U0d" customClass="ViewController" customModule="Tab_Bar_Grande" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GoR-Xo-jtq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-Motorcycle" translatesAutoresizingMaskIntoConstraints="NO" id="R2D-Hh-f4b">
+                                <rect key="frame" x="83" y="233" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.041681021149999997" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="cms-Ee-4UI"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Moto" image="8-Motorcycle" id="lbG-07-gzu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z5I-Wx-3tA" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1522" y="134"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="9RT-lC-1z7">
+            <objects>
+                <tabBarController id="Tam-u9-JT6" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dgs-BS-Tfe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="79h-mt-NF4"/>
+                        <segue destination="04Z-Jl-UfI" kind="relationship" relationship="viewControllers" id="H2k-rD-tb4"/>
+                        <segue destination="fu2-Nb-U0d" kind="relationship" relationship="viewControllers" id="HjS-7C-JUT"/>
+                        <segue destination="kbs-Zc-bb0" kind="relationship" relationship="viewControllers" id="Y8y-kJ-0Jb"/>
+                        <segue destination="KfU-4c-SW2" kind="relationship" relationship="viewControllers" id="pZo-xL-bps"/>
+                        <segue destination="qLa-AZ-Mgf" kind="relationship" relationship="viewControllers" id="gO0-an-hzb"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mc0-FD-H1F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1089" y="287"/>
+        </scene>
+        <!--Navio-->
+        <scene sceneID="hwN-34-g0f">
+            <objects>
+                <viewController id="kbs-Zc-bb0" customClass="ViewController" customModule="Tab_Bar_Grande" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jj1-OG-MR6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-Sail Boat" translatesAutoresizingMaskIntoConstraints="NO" id="Ofz-QJ-QvM">
+                                <rect key="frame" x="67" y="241" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="xzJ-63-P0z"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Navio" image="8-Sail Boat" id="LeD-lT-YUm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aPO-sS-Wb9" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137" y="830"/>
+        </scene>
+        <!--Train-->
+        <scene sceneID="Yh2-lw-rzu">
+            <objects>
+                <viewController id="KfU-4c-SW2" customClass="ViewController" customModule="Tab_Bar_Grande" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Qn-52-evP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-Train" translatesAutoresizingMaskIntoConstraints="NO" id="1t5-db-lnX">
+                                <rect key="frame" x="67" y="225" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.24183840678117985" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="ThE-FG-eXz"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Train" image="8-Train" id="xwq-5n-94i"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YkO-Tq-ihN" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="798" y="830"/>
+        </scene>
+        <!--Viking-->
+        <scene sceneID="Ndy-ih-Cd8">
+            <objects>
+                <viewController id="qLa-AZ-Mgf" customClass="ViewController" customModule="Tab_Bar_Grande" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Ja-fX-e4N">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-Viking Ship" translatesAutoresizingMaskIntoConstraints="NO" id="q18-0h-65x">
+                                <rect key="frame" x="67" y="220" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92201511672865644" green="1" blue="0.0017117565483993902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="EJr-6T-zj2"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Viking" image="8-Viking Ship" id="oqO-D0-Yrt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mZs-ab-Dj7" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1521" y="830"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="8-Bus" width="25" height="25"/>
+        <image name="8-Car" width="25" height="25"/>
+        <image name="8-Motorcycle" width="25" height="25"/>
+        <image name="8-Sail Boat" width="25" height="25"/>
+        <image name="8-Train" width="25" height="25"/>
+        <image name="8-Viking Ship" width="25" height="25"/>
+        <image name="icons8-Bus" width="100" height="100"/>
+        <image name="icons8-Car" width="100" height="100"/>
+        <image name="icons8-Motorcycle" width="100" height="100"/>
+        <image name="icons8-Sail Boat" width="100" height="100"/>
+        <image name="icons8-Train" width="100" height="100"/>
+        <image name="icons8-Viking Ship" width="100" height="100"/>
+    </resources>
+</document>
