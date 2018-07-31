@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="y9d-k4-gML">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="BSx-Eg-pUI">
+            <objects>
+                <viewController id="TPw-fg-Hck" customClass="ViewController" customModule="CoreDataExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c6j-uv-n2T">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dm2-sB-MG4">
+                                <rect key="frame" x="0.0" y="64" width="375" height="483"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PessoaCell" id="VhP-IW-rmh" customClass="PessoaTableViewCell" customModule="CoreDataExample" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VhP-IW-rmh" id="Mt9-9n-SMz">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DbN-hm-qm4">
+                                                    <rect key="frame" x="15" y="22" width="345" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="DbN-hm-qm4" id="Q0r-wD-Vut"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5GK-im-ons">
+                                <rect key="frame" x="152" y="577" width="71" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="FETCH"/>
+                                <connections>
+                                    <action selector="tapFetchButton:" destination="TPw-fg-Hck" eventType="touchUpInside" id="ew4-14-T4G"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YEA-Xy-8ka" firstAttribute="bottom" secondItem="5GK-im-ons" secondAttribute="bottom" constant="50" id="Dwi-MX-h3L"/>
+                            <constraint firstItem="5GK-im-ons" firstAttribute="top" secondItem="dm2-sB-MG4" secondAttribute="bottom" constant="30" id="RvZ-ev-4aQ"/>
+                            <constraint firstItem="5GK-im-ons" firstAttribute="centerX" secondItem="YEA-Xy-8ka" secondAttribute="centerX" id="Y4b-5g-Yea"/>
+                            <constraint firstItem="YEA-Xy-8ka" firstAttribute="trailing" secondItem="dm2-sB-MG4" secondAttribute="trailing" id="ZkG-Ng-ieD"/>
+                            <constraint firstItem="dm2-sB-MG4" firstAttribute="top" secondItem="YEA-Xy-8ka" secondAttribute="top" id="fBd-c9-UUN"/>
+                            <constraint firstItem="dm2-sB-MG4" firstAttribute="leading" secondItem="YEA-Xy-8ka" secondAttribute="leading" id="fon-49-h6D"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YEA-Xy-8ka"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UDK-iv-yV7">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="qdq-If-LtL">
+                            <connections>
+                                <action selector="tapAddButton:" destination="TPw-fg-Hck" id="iyj-hC-SkX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="pessoaTableView" destination="dm2-sB-MG4" id="xvS-LI-kPj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SLD-ib-yyB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1016.8" y="111.99400299850076"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UEy-6Q-aCU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="y9d-k4-gML" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KbA-lH-Z1Z">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TPw-fg-Hck" kind="relationship" relationship="rootViewController" id="osN-TZ-auR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q1I-Ct-rNI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="77.599999999999994" y="111.99400299850076"/>
+        </scene>
+    </scenes>
+</document>
